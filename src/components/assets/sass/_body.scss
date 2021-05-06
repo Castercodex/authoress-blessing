@@ -16,10 +16,13 @@
         color: black;
       }
       .story {
-        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.267);
-        text-align: center;
-        height: 300px;
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.089);
+        text-align: justify;
+        // height: 300px;
         margin: 10px;
+        p {
+        font-size: 12px;
+      }
         .activities {
           display: flex;
           justify-content: space-around;
@@ -27,8 +30,8 @@
         }
       }
       .img {
-        width: 200px;
-        height: 120px;
+        width: 300px;
+        height: 220px;
       }
     }
   }
@@ -53,6 +56,7 @@
       h6 {
         font-size: 8px;
       }
+      
       .preview-img {
         width: 50px;
         height: 40px;

@@ -15,6 +15,7 @@
   flex-flow: column;
   width: 100%;
   padding: 30px 0;
+  z-index: 10;
 }
 
 .header .heading {
@@ -24,6 +25,42 @@
   flex-direction: column;
   flex-flow: column;
   width: 100%;
+}
+
+.header .nav {
+  background: white;
+  background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.445), rgba(255, 255, 255, 0.904));
+  backdrop-filter: blur(20px);
+  border: none;
+  position: fixed;
+  width: 100%;
+  min-height: 10vh;
+  z-index: 1;
+  top: 0px;
+  animation: nav_bar 0.7s linear;
+}
+
+@keyframes nav_bar {
+  0% {
+    opacity: 0;
+    height: 0vh;
+  }
+  25% {
+    opacity: 0.2;
+    height: 15vh;
+  }
+  50% {
+    opacity: 0.5;
+    height: 20vh;
+  }
+  75% {
+    opacity: 0.7;
+    height: 15vh;
+  }
+  100% {
+    opacity: 1;
+    height: 10vh;
+  }
 }
 
 .header nav {
@@ -36,34 +73,62 @@
 
 .header nav .search {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+}
+
+.header nav .search .search-bar-btn {
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  flex-flow: column;
-  width: 35%;
+  flex-wrap: nowrap;
 }
 
 .header nav .search .search-bar-btn #search-input,
 .header nav .search .search-bar-btn .search-btn {
-  height: 20px;
+  height: 30px;
+  outline-style: none;
 }
 
 .header nav .search .search-bar-btn #search-input {
   border: 1px solid #4f4f4f;
   width: 200px;
   max-width: 200px;
+  border-right: none;
+  padding-left: 10px;
+  background: transparent;
+}
+
+.header nav .search .search-bar-btn #search-input::placeholder {
+  font-style: italic;
 }
 
 .header nav .search .search-bar-btn .search-btn {
   width: 50px;
+  background: transparent;
+  border: 1px solid #4f4f4f;
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.header nav .search .search-bar-btn .search-btn:hover {
+  background: #000000;
+  border: 0;
+  fill: #ffffff;
 }
 
 .header nav .nav-links {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 30%;
+  width: 35%;
   font-size: 15px;
+  flex: 0.7;
 }
 
 .header nav .nav-links .active {
@@ -79,7 +144,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 35%;
+  width: 20%;
 }
 
 .header nav .login--info button {
@@ -129,10 +194,13 @@
 }
 
 .stories .stories-side-bar-grid .stories-grid .story {
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.267);
-  text-align: center;
-  height: 300px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.089);
+  text-align: justify;
   margin: 10px;
+}
+
+.stories .stories-side-bar-grid .stories-grid .story p {
+  font-size: 12px;
 }
 
 .stories .stories-side-bar-grid .stories-grid .story .activities {
@@ -142,8 +210,8 @@
 }
 
 .stories .stories-side-bar-grid .stories-grid .img {
-  width: 200px;
-  height: 120px;
+  width: 300px;
+  height: 220px;
 }
 
 .side-bar .latest-grid {

@@ -50,12 +50,6 @@ export const card = [
     overview: "this is sample over view",
     url: "lock",
   },
-  {
-    image: img,
-    title: "8",
-    overview: "this is sample over view",
-    url: "lock",
-  },
 ];
 
 const Stories = ({ card }) => {

@@ -9,6 +9,7 @@
   flex-flow: column;
   width: 100%;
   padding: 30px 0;
+  z-index: 10;
   .heading {
     display: flex;
     justify-content: center;
@@ -17,6 +18,45 @@
     flex-flow: column;
     width: 100%;
   }
+  .nav {
+    background: white;
+    background: linear-gradient(
+      to left bottom,
+      rgba(255, 255, 255, 0.445),
+      rgba(255, 255, 255, 0.904)
+    );
+    backdrop-filter: blur(20px);
+    border: none;
+    position: fixed;
+    width: 100%;
+    min-height: 10vh;
+    z-index: 1;
+    top: 0px;
+    animation: nav_bar 0.7s linear;
+  }
+  @keyframes nav_bar {
+    0% {
+      opacity: 0;
+      height: 0vh;
+    }
+    25% {
+      opacity: 0.2;
+      height: 15vh;
+    }
+    50% {
+      opacity: 0.5;
+      height: 20vh;
+    }
+    75% {
+      opacity: 0.7;
+      height: 15vh;
+    }
+    100% {
+      opacity: 1;
+      height: 10vh;
+    }
+  }
+
   nav {
     display: flex;
     justify-content: space-evenly;
@@ -27,25 +67,49 @@
     // padding: 20px;
     .search {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
-      flex-direction: column;
-      flex-flow: column;
-      width: 35%;
+      width: 20%;
       // flex: 2;
       // padding-right: 100px;
       .search-bar-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
         #search-input,
         .search-btn {
-          height: 20px;
+          height: 30px;
+          outline-style: none;
         }
         #search-input {
           border: 1px solid #4f4f4f;
           width: 200px;
           max-width: 200px;
+          border-right: none;
+          padding-left: 10px;
+          background: transparent;
+
+          &::placeholder {
+            font-style: italic;
+          }
         }
         .search-btn {
           width: 50px;
+          background: transparent;
+          border: 1px solid #4f4f4f;
+          border-left: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: 0.3s linear;
+          &:hover {
+            background: #000000;
+            border: 0;
+
+            fill: #ffffff;
+          }
         }
       }
     }
@@ -53,10 +117,10 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      width: 30%;
+      width: 35%;
       font-size: 15px;
-      // flex: 1;
-      .active{
+      flex: 0.7;
+      .active {
         color: #b60000;
       }
       .nav-link {
@@ -68,9 +132,8 @@
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      width: 35%;
+      width: 20%;
       // flex: 2;
-      // padding-left: 100px;
       button {
         background: #000000;
         color: #ffffff;
