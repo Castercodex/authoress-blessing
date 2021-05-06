@@ -1,0 +1,101 @@
+.header {
+  position: static;
+  top: 0;
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-flow: column;
+  width: 100%;
+  padding: 30px 0;
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-flow: column;
+    width: 100%;
+  }
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 10vh;
+    // flex-wrap: wrap-reverse;
+    // padding: 20px;
+    .search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-flow: column;
+      width: 35%;
+      // flex: 2;
+      // padding-right: 100px;
+      .search-bar-btn {
+        #search-input,
+        .search-btn {
+          height: 20px;
+        }
+        #search-input {
+          border: 1px solid #4f4f4f;
+          width: 200px;
+          max-width: 200px;
+        }
+        .search-btn {
+          width: 50px;
+        }
+      }
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 30%;
+      font-size: 15px;
+      // flex: 1;
+      .active{
+        color: #b60000;
+      }
+      .nav-link {
+        list-style: none;
+        cursor: pointer;
+      }
+    }
+    .login--info {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 35%;
+      // flex: 2;
+      // padding-left: 100px;
+      button {
+        background: #000000;
+        color: #ffffff;
+        height: 30px;
+        cursor: pointer;
+      }
+      .subscribe {
+        .sub-btn {
+          background: none;
+          border: 1px solid #000000;
+          width: 100px;
+          color: #000000;
+          transition: 0.2s linear;
+          &:hover {
+            background: #b60000;
+            border: 0;
+            color: #ffffff;
+          }
+        }
+      }
+      .login {
+        .login--btn {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
